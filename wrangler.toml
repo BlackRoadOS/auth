@@ -1,6 +1,5 @@
 name = "auth-blackroad"
 main = "src/index.js"
 compatibility_date = "2024-12-01"
-routes = [
-  { pattern = "auth.blackroad.io/*", custom_domain = true }
-]
+# Custom domain is managed via CF dashboard route, not wrangler
+# Domain: auth.blackroad.io
