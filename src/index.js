@@ -1,4 +1,3 @@
-
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
@@ -475,7 +474,7 @@ canvas#bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-e
 <a href="https://lucidia.earth" style="background:#131313;border:1px solid #1a1a1a;border-radius:6px;padding:8px 14px;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-size:13px;color:#737373;font-weight:500">Lucidia</a>
 <a href="https://github.com/BlackRoad-OS-Inc" style="background:#131313;border:1px solid #1a1a1a;border-radius:6px;padding:8px 14px;text-decoration:none;font-family:'Space Grotesk',sans-serif;font-size:13px;color:#737373;font-weight:500">GitHub</a>
 </div>
-<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#262626"><span data-stat="repos">2,194</span> repos · <span data-stat="orgs">18</span> orgs · <span data-stat="domains">19</span> domains · <span data-stat="agents">200</span> agents</div>
+<div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#262626"><span data-stat="repos">2,194</span> repos \xB7 <span data-stat="orgs">18</span> orgs \xB7 <span data-stat="domains">19</span> domains \xB7 <span data-stat="agents">200</span> agents</div>
 </div>
   <div class="eco">
     <p>BlackRoad OS &mdash; Remember the Road. Pave Tomorrow.</p>
@@ -570,9 +569,7 @@ var worker_default = {
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/robots.txt")
-      return new Response("User-agent: *
-Allow: /
-Sitemap: https://auth.blackroad.io/sitemap.xml", { headers: { "Content-Type": "text/plain" } });
+      return new Response("User-agent: *\nAllow: /\nSitemap: https://auth.blackroad.io/sitemap.xml", { headers: { "Content-Type": "text/plain" } });
     if (url.pathname === "/sitemap.xml") {
       const d = (/* @__PURE__ */ new Date()).toISOString().split("T")[0];
       return new Response(`<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://auth.blackroad.io/</loc><lastmod>${d}</lastmod><priority>1.0</priority></url></urlset>`, { headers: { "Content-Type": "application/xml" } });
